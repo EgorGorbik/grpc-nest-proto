@@ -4,7 +4,6 @@ package message;
 
 service MessageService {
   rpc CreateMessage (CreateMessageRequest) returns (CreateMessageResponse) {}
-  rpc FindOne (FindOneRequest) returns (FindOneResponse) {}
 }
 
 // CreateMessage

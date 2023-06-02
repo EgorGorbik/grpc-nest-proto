@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package message;
+
+service MessageService {
+  rpc CreateMessage (CreateMessageRequest) returns (CreateMessageResponse) {}
+  rpc FindOne (FindOneRequest) returns (FindOneResponse) {}
+}
+
+// CreateMessage
+
+message CreateMessageRequest {
+  string message = 1;
+}
+
+message CreateMessageResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  int32 id = 3;
+}
